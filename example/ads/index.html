@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Example</title>
+        <link type="text/css" rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+ 
+        <div id="content-popup" style="border: solid 1px; padding: 20px; background: #ddd;">
+            <input type="button" id="btn_hide_popup" value="X"/>
+            <a href="https://minhh.gq/" target="_blank" rel="noopener">
+            <img src="https://www.hanoicomputer.vn/media/lib/04-08-2020/pcgaming.jpg" width="500px" height="500px"/>
+            <p>Bán pc giá rẻ tại TP HCM</p>
+        </a>
+        </div>
+        <div id="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus, justo nec varius bibendum, eros velit auctor felis, quis suscipit purus lacus vel ipsum. Phasellus et pellentesque nisl, ut gravida purus. Donec pulvinar viverra leo. Morbi dictum pharetra massa, vel pretium magna facilisis in. Proin quis urna sit amet ligula volutpat pulvinar et at felis. Proin non varius enim. Aenean facilisis lacinia tincidunt. Morbi porttitor odio eu purus blandit vehicula. Donec vel ante eu ligula auctor tempus sed et purus. Suspendisse non elementum sapien, ut vehicula dolor. Etiam condimentum porta lacus, eu placerat nibh auctor et. Maecenas convallis eros augue. Proin at rutrum elit. Sed viverra est nec tortor interdum, id maximus est volutpat.
+
+                Vivamus consectetur tristique facilisis. Praesent eu leo vitae elit pellentesque tincidunt. Pellentesque dapibus tortor quis semper finibus. Nullam semper, justo non dapibus fermentum, magna justo mattis turpis, a fringilla mauris quam et elit. In elit justo, vestibulum varius mi non, mattis accumsan est. Donec eget urna vitae ex maximus consequat ac placerat tellus. Etiam eleifend, lectus id fringilla tincidunt, mi urna pellentesque ligula, ut cursus tellus velit vitae est.
+                
+                Integer hendrerit iaculis elementum. Quisque a metus dignissim, porttitor sapien quis, malesuada nulla. Phasellus at vulputate diam. Suspendisse hendrerit mi dignissim, tristique orci quis, pulvinar dolor. Integer lobortis ex velit, sit amet sagittis diam volutpat non. Phasellus a posuere ante. Pellentesque ac iaculis nisl. Phasellus commodo erat in eros ornare, ut porta tellus iaculis. Sed ornare eros non dapibus aliquet. Vivamus accumsan ante eu pharetra euismod. Proin quam lacus, tempus eu justo non, tincidunt dictum enim.
+                
+                Vivamus vel tortor in leo scelerisque luctus. Proin lectus elit, pulvinar a orci non, convallis faucibus velit. Aliquam et tortor orci. Phasellus non vulputate dolor. Aliquam euismod varius ante eget fermentum. Donec hendrerit laoreet augue at ullamcorper. Nullam ultrices, tellus auctor condimentum sollicitudin, felis quam aliquet enim, facilisis euismod tellus massa dapibus urna. Vivamus pharetra aliquet massa eget mollis.
+                
+                Sed quis sem pharetra, cursus mi et, suscipit lacus. Donec laoreet maximus facilisis. Duis at justo est. Fusce tincidunt lectus et massa convallis rhoncus. Integer egestas posuere mi ac dictum. Vestibulum vel tempor nisl. In a felis quis magna pretium aliquet et vel nulla. Nullam vestibulum quam lectus.</p>
+
+                <input type="button" id="btn_show_footer" value="Credit">
+                <input type="button" id="btn_hide_footer" value="Hide credit">
+        </div>
+        <div id="content_footer">
+            <p>© Copyright 2021 | Freeware Inc</p>
+        </div>
+        <br/>
+ 
+        <script language="javascript">
+ 
+            document.getElementById("btn_hide_popup").onclick = function content_popup_hide (){
+                document.getElementById("content-popup").style.display = 'none';
+            };
+ 
+           function content_popup_show () {
+                document.getElementById("content-popup").style.display = 'block';
+            };
+
+            setTimeout(content_popup_show,5000);
+
+            document.getElementById("btn_show_footer").onclick = function content_footer (){
+                document.getElementById("content_footer").style.display = 'block'
+            };
+
+            document.getElementById("btn_hide_footer").onclick = function content_footer (){
+                document.getElementById("content_footer").style.display = 'none'
+            };
+ 
+        </script>
+    </body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: red;
+        }
+
+        #content-popup{
+            display: none;
+            text-align: center;
+            margin-left: 300px;
+            margin-right: 300px;
+            z-index: 1000;
+            position: fixed;
+        }
+
+        #content{
+            z-index: 500;
+            margin-left: 200px;
+            margin-right: auto;
+        }
+        #content_footer{
+            text-align: center;
+            display: none;
+        }
+        input{
+            padding: 40,80px;
+        }
+    </style>
+</html>
